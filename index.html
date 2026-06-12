@@ -13,8 +13,8 @@
 <body>
     <nav>
         <div class="nav1">
-            <img src="https://ik.imagekit.io/sheryians/light-logo_lNzGXRRlQ.png" alt="">
-            <h4>Sheryians <br> coding school</h4>
+            <img src="https://dfdx9u0psdezh.cloudfront.net/logos/full-logo.webp" alt="Sheryians Logo">
+           
         </div>
         <div class="nav2">
             <h4>Home</h4>
@@ -60,8 +60,19 @@
             </div>
             <div class="right">
                 <div class="right-in">
-                    <div class="image">
-                        <img src="https://px.pixxo.io/sheryians/courses/thumbnails/cohort2Thumbnail.jpeg" alt="">
+                    <div class="image" id="video-container">
+                        <div class="video-thumbnail" id="videoThumbnail">
+                            <img src="https://img.youtube.com/vi/cVrbFvIXwkk/maxresdefault.jpg" alt="Video Thumbnail">
+                        </div>
+                        <iframe id="ytPlayer" 
+                            src="https://www.youtube.com/embed/cVrbFvIXwkk?enablejsapi=1&start=1" 
+                            title="Cohort 2.0 Video" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen
+                            style="display:none; width:100%; aspect-ratio:16/9;">
+                        </iframe>
+
                     </div>
                     <div class="image-bottom">
                         <h4>Language <span class="green">Hinglish</span></h4>
@@ -73,15 +84,12 @@
             </div>
         </section>
         <section class="section2">
-            <div>
+            <div class="get-placed-heading">
                 <h1 class="bloom">Get Placed</h1>
-                <h1>Get Placed</h1>
+                <h1 class="get-placed-text">Get Placed</h1>
             </div>
 
-            <h3>With Job Ready Ai-Powered Cohort</h3>
-
-            <img src="https://ik.imagekit.io/sheryians/Cohort%202.0/Group%2076(1)_G8t15l3CHb.png?updatedAt=1754552905662"
-                alt="">
+            <h3>With job ready AI powered cohort</h3>
 
         </section>
         <section class="section3">
@@ -675,6 +683,23 @@
             });
         });
 
+    </script>
+
+    <script>
+        // Video thumbnail click-to-play for section1 .right .image
+        document.addEventListener('DOMContentLoaded', () => {
+            const thumbnail = document.getElementById('videoThumbnail');
+            const iframe = document.getElementById('ytPlayer');
+
+            if (thumbnail && iframe) {
+                thumbnail.addEventListener('click', () => {
+                    thumbnail.style.display = 'none';
+                    iframe.style.display = 'block';
+                    // Autoplay the video when clicked
+                    iframe.src = 'https://www.youtube.com/embed/cVrbFvIXwkk?enablejsapi=1&start=1&autoplay=1';
+                });
+            }
+        });
     </script>
 
 
